@@ -1,0 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap");
+
+:root {
+    font-family: "DM Sans", sans-serif;
+    color: #172033;
+    background: #fff;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    --ink: #172033;
+    --muted: #697386;
+    --line: #e7eaf0;
+    --soft: #f6f8fb;
+    --accent: #c7f36b;
+    --navy: #101827;
+    --green: #287a51;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-width: 320px;
+}

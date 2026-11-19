@@ -1,0 +1,26 @@
+.footer {
+    background: #101827;
+    color: #fff;
+    padding: 32px 0;
+}
+
+.footer-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer-logo {
+    color: #fff;
+}
+
+.footer-inner p {
+    font-size: 11px;
+    color: #9da8b7;
+    margin: 8px 0 0;
+}
+
+.footer-note {
+    font-size: 10px;
+    color: #9da8b7;
+}
