@@ -6,6 +6,8 @@ import Footer from "./components/Footer";
 import Home from "./pages/Home"
 import Shop from "./pages/Shop";
 import ProductDetails from "./pages/ProductDetails";
+import Compare from "./pages/Compare";
+import Cart from "./pages/Cart";
 
 function readStorage(key, fallback) {
     try {
@@ -132,6 +134,8 @@ export default function App() {
                         }
                     />
                     <Route path="/product/:id" element={<ProductDetails onAdd={addToCart} compared={compared} onCompare={toggleCompare} />} />
+                    <Route path="/compare" element={<Compare compared={compared} onCompare={toggleCompare} />} />
+                    <Route path="/cart" element={<Cart cart={cart} onUpdate={updateCart} onRemove={removeCart} />} />
                     <Route
                         path="*"
                         element={

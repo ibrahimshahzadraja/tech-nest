@@ -1,0 +1,120 @@
+.cart-layout,
+.checkout-layout {
+    display: grid;
+    grid-template-columns: 1fr 330px;
+    gap: 30px;
+    align-items: start;
+}
+
+.cart-items {
+    border-top: 1px solid var(--line);
+}
+
+.cart-item {
+    display: grid;
+    grid-template-columns: 95px 1fr 100px 110px;
+    gap: 15px;
+    align-items: center;
+    padding: 17px 0;
+    border-bottom: 1px solid var(--line);
+}
+
+.cart-item > img {
+    width: 90px;
+    height: 90px;
+    object-fit: contain;
+    background: #f5f7f9;
+    border-radius: 9px;
+    mix-blend-mode: multiply;
+}
+
+.cart-item-info h3 {
+    font: 700 14px Manrope;
+    margin: 4px 0;
+}
+
+.cart-item-info > strong {
+    font-size: 12px;
+}
+
+.cart-item-info .remove-link {
+    display: block;
+    padding: 5px 0;
+}
+
+.quantity-control {
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--line);
+    border-radius: 7px;
+    width: max-content;
+}
+
+.quantity-control button {
+    border: 0;
+    background: white;
+    width: 29px;
+    height: 30px;
+    font-size: 16px;
+}
+
+.quantity-control span {
+    font-size: 11px;
+    min-width: 20px;
+    text-align: center;
+}
+
+.line-total {
+    text-align: right;
+    font-size: 12px;
+}
+
+.order-summary {
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 20px;
+    position: sticky;
+    top: 95px;
+}
+
+.order-summary h2,
+.checkout-form h2 {
+    font: 700 18px Manrope;
+    margin: 0 0 20px;
+}
+
+.summary-line,
+.summary-total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 11px;
+    margin: 13px 0;
+    color: #697386;
+}
+
+.summary-line strong,
+.summary-total strong {
+    color: #172033;
+}
+
+.summary-total {
+    border-top: 1px solid var(--line);
+    padding-top: 15px;
+    margin-top: 16px;
+    font-size: 13px;
+    color: #172033;
+}
+
+.summary-total strong {
+    font: 800 20px Manrope;
+}
+
+.delivery-hint {
+    background: #f1f7e9;
+    color: #5a7137;
+    padding: 9px;
+    border-radius: 6px;
+    font-size: 10px;
+    line-height: 1.5;
+}
