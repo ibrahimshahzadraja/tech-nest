@@ -3,11 +3,12 @@ import { Link, Route, Routes, useLocation } from "react-router-dom";
 import { products } from "./data/products";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import Home from "./pages/Home"
+import Home from "./pages/Home";
 import Shop from "./pages/Shop";
 import ProductDetails from "./pages/ProductDetails";
 import Compare from "./pages/Compare";
 import Cart from "./pages/Cart";
+import Checkout from "./pages/Checkout";
 
 function readStorage(key, fallback) {
     try {
@@ -136,6 +137,7 @@ export default function App() {
                     <Route path="/product/:id" element={<ProductDetails onAdd={addToCart} compared={compared} onCompare={toggleCompare} />} />
                     <Route path="/compare" element={<Compare compared={compared} onCompare={toggleCompare} />} />
                     <Route path="/cart" element={<Cart cart={cart} onUpdate={updateCart} onRemove={removeCart} />} />
+                    <Route path="/checkout" element={<Checkout cart={cart} onComplete={completeOrder} />} />
                     <Route
                         path="*"
                         element={
