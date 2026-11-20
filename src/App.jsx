@@ -4,6 +4,8 @@ import { products } from "./data/products";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Home from "./pages/Home"
+import Shop from "./pages/Shop";
+import ProductDetails from "./pages/ProductDetails";
 
 function readStorage(key, fallback) {
     try {
@@ -123,6 +125,13 @@ export default function App() {
             ) : (
                 <Routes>
                     <Route path="/" element={<Home compared={compared} onCompare={toggleCompare} onAdd={addToCart} />} />
+                    <Route
+                        path="/shop"
+                        element={
+                            <Shop compared={compared} onCompare={toggleCompare} onAdd={addToCart} onSimulateFailure={() => setLoadState("error")} />
+                        }
+                    />
+                    <Route path="/product/:id" element={<ProductDetails onAdd={addToCart} compared={compared} onCompare={toggleCompare} />} />
                     <Route
                         path="*"
                         element={
