@@ -9,6 +9,7 @@ import ProductDetails from "./pages/ProductDetails";
 import Compare from "./pages/Compare";
 import Cart from "./pages/Cart";
 import Checkout from "./pages/Checkout";
+import Confirmation from "./pages/Confirmation";
 
 function readStorage(key, fallback) {
     try {
@@ -138,6 +139,7 @@ export default function App() {
                     <Route path="/compare" element={<Compare compared={compared} onCompare={toggleCompare} />} />
                     <Route path="/cart" element={<Cart cart={cart} onUpdate={updateCart} onRemove={removeCart} />} />
                     <Route path="/checkout" element={<Checkout cart={cart} onComplete={completeOrder} />} />
+                    <Route path="/confirmation" element={<Confirmation order={order} />} />
                     <Route
                         path="*"
                         element={
